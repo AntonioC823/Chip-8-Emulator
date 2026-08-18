@@ -111,8 +111,6 @@ std::vector< sf::RectangleShape> Chip8::printDisplay() const
 	{
 		for (int x = 0; x < DISPLAY_WIDTH; x++)
 		{
-			// std::cout << (display[y * DISPLAY_WIDTH + x] ? '#' : ' ');
-
 			if (display[y * DISPLAY_WIDTH + x])
 			{
 				sf::RectangleShape pixel;
@@ -123,8 +121,6 @@ std::vector< sf::RectangleShape> Chip8::printDisplay() const
 				pixels.push_back(pixel);
 			}
 		}
-
-		// std::cout << '\n';
 	}
 
 	return pixels;

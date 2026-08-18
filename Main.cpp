@@ -1,5 +1,6 @@
 #include "Chip8.h"
 #include <SFML/Audio.hpp>
+#include <iostream>
 #include <cmath>
 #include <cstdint>
 #include <vector>
@@ -30,7 +31,7 @@ int main()
 
 	if (!soundBuffer.loadFromSamples(samples.data(), samples.size(), 1, SAMPLE_RATE, { sf::SoundChannel::Mono }))
 	{
-		return 1;
+		std::cerr << "Failed to load sound buffer. Continuing without sound." << std::endl;
 	}
 
 	sf::Sound beep(soundBuffer);
